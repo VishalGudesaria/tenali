@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newton's Laws | Interactive Physics Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <nav><a class="brand" href="#home">⚛ Physics Lab</a><div class="navlinks"><a href="#laws">The Laws</a><a href="#lab">Simulation</a><a href="#quiz">Quiz</a><a href="#about">About</a></div></nav>
+  <section id="home" class="hero-content">
+    <p class="eyebrow">ICT PROJECT · PHYSICS</p>
+    <h1>Newton's Laws<br><span>of Motion</span></h1>
+    <p class="intro">Explore the forces that shape movement. Learn the three laws through examples, interactive experiments, and a quick quiz.</p>
+    <a class="button" href="#lab">Start experimenting ↓</a>
+  </section>
+  <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+</header>
+<main>
+  <section class="section" id="laws">
+    <div class="section-heading"><p class="eyebrow">THE FOUNDATIONS</p><h2>Three laws. One universe of motion.</h2><p>Sir Isaac Newton described how forces affect the motion of objects.</p></div>
+    <div class="law-grid">
+      <article class="law-card"><div class="number">01</div><h3>Law of Inertia</h3><p>An object stays at rest, or keeps moving at constant velocity, unless acted on by a net external force.</p><div class="example">🚗 <strong>Example:</strong> Passengers lean forward when a moving car brakes.</div></article>
+      <article class="law-card"><div class="number">02</div><h3>Law of Acceleration</h3><p>Acceleration depends on the net force and the object's mass. More force means more acceleration; more mass means less acceleration.</p><div class="formula">F = m × a</div><div class="example">⚽ <strong>Example:</strong> A harder kick accelerates a ball more.</div></article>
+      <article class="law-card"><div class="number">03</div><h3>Action & Reaction</h3><p>For every action force, there is an equal and opposite reaction force. The forces act on different objects.</p><div class="example">🚀 <strong>Example:</strong> A rocket pushes gas downward; gas pushes the rocket upward.</div></article>
+    </div>
+  </section>
+  <section class="section lab-section" id="lab">
+    <div class="section-heading"><p class="eyebrow">INTERACTIVE EXPERIMENT</p><h2>Explore F = ma</h2><p>Change mass and force, then run the experiment to see how acceleration changes.</p></div>
+    <div class="lab-card">
+      <div class="controls">
+        <label>Force: <span id="forceValue">10</span> N<input id="force" type="range" min="1" max="30" value="10"></label>
+        <label>Mass: <span id="massValue">2</span> kg<input id="mass" type="range" min="1" max="10" value="2"></label>
+        <div class="results"><div><small>Acceleration</small><strong id="acceleration">5.0 m/s²</strong></div><div><small>Net force</small><strong id="netForce">10 N</strong></div></div>
+        <button id="run" class="button">▶ Run simulation</button><button id="reset" class="button secondary">↺ Reset</button>
+        <p class="hint">Try keeping force constant while increasing mass. What happens to acceleration?</p>
+      </div>
+      <div class="scene" aria-label="Animated cart simulation">
+        <div class="scene-label">SIMULATION VIEW</div><div class="track"></div><div id="cart" class="cart"><div class="cart-top"></div><div class="wheel wheel-left"></div><div class="wheel wheel-right"></div><span>m</span></div><div class="force-arrow" id="arrow">→ Force</div>
+        <div id="status" class="status">Ready to experiment</div>
+      </div>
+    </div>
+  </section>
+  <section class="section examples">
+    <div class="section-heading"><p class="eyebrow">IN THE REAL WORLD</p><h2>Physics is everywhere</h2></div>
+    <div class="example-grid"><div class="example-tile"><span>🚌</span><h3>Inertia in transport</h3><p>Seatbelts help passengers stay safely in place when a vehicle changes speed.</p></div><div class="example-tile"><span>🏏</span><h3>Force changes motion</h3><p>Applying a larger force to a ball changes its velocity more quickly.</p></div><div class="example-tile"><span>🧍</span><h3>Action–reaction</h3><p>When you walk, your foot pushes the ground backward and the ground pushes you forward.</p></div></div>
+  </section>
+  <section class="section quiz-section" id="quiz">
+    <div class="section-heading"><p class="eyebrow">CHECK YOUR KNOWLEDGE</p><h2>Quick physics quiz</h2><p>Answer all three questions and check your score.</p></div>
+    <div class="quiz-card">
+      <div class="question"><p>1. Which law explains why a passenger moves forward when a car suddenly stops?</p><label><input type="radio" name="q1" value="a"> First law</label><label><input type="radio" name="q1" value="b"> Second law</label><label><input type="radio" name="q1" value="c"> Third law</label></div>
+      <div class="question"><p>2. If the net force doubles and mass stays the same, acceleration will…</p><label><input type="radio" name="q2" value="a"> Halve</label><label><input type="radio" name="q2" value="b"> Double</label><label><input type="radio" name="q2" value="c"> Stay the same</label></div>
+      <div class="question"><p>3. Action and reaction forces act…</p><label><input type="radio" name="q3" value="a"> On the same object</label><label><input type="radio" name="q3" value="b"> In the same direction</label><label><input type="radio" name="q3" value="c"> On different objects</label></div>
+      <button id="checkQuiz" class="button">Check my answers</button><p id="quizResult" class="quiz-result" aria-live="polite"></p>
+    </div>
+  </section>
+  <section class="section about" id="about"><div><p class="eyebrow">PROJECT INFORMATION</p><h2>About this project</h2><p>This interactive website was created as an ICT project to explain Newton's three laws of motion using digital content, an interactive simulation, and a quiz.</p></div><div class="student-card"><p><strong>Submitted by:</strong> VISHAL GUDESARIA </p><p><strong>Course:</strong> ICT</p><p><strong>Topic:</strong> Newton's Laws of Motion</p><p><strong>School / College:</strong> IIT ROPAR </p><p class="edit-note"></p></div></section>
+</main>
+<footer>Made for learning · Newton's Laws of Motion · ICT Project</footer>
+<script src="script.js"></script>
+</body>
+</html>
